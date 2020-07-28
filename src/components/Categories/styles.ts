@@ -1,4 +1,5 @@
 import styled from 'styled-components/native';
+import LinearGradient from 'react-native-linear-gradient';
 
 export const Container = styled.View`
   display: flex;
@@ -7,7 +8,7 @@ export const Container = styled.View`
   margin-top: 20px;
 `;
 
-export const IconContainer = styled.View`
+export const IconContainer = styled(LinearGradient)`
   background: #000;
   height: 56px;
   width: 56;
