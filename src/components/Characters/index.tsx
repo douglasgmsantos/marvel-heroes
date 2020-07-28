@@ -1,21 +1,18 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useRef } from 'react';
 
 import api from '../../services/api';
 
+import Character from '../Character';
+import CharacterHeader from '../CharacterHeader';
+
 import {
   Container,
-  CharactersListContainer,
-  CharactersListHeader,
-  Title,
-  MoreCharacter,
-  CharactersList,
-  CardImage,
-  Card,
-  CardTitle,
-  CardSubTitle
+  CharactersListContainer
 } from './styles';
 
 const Characters: React.FC = () => {
+  const characterListRef = useRef(null);
+
   const [heroes, setHeroes] = useState([]);
   const [villains, setVillains] = useState([]);
   const [antheroes, setAntHeroes] = useState([]);
@@ -28,20 +25,20 @@ const Characters: React.FC = () => {
       const heroes = await api.get("/heroes");
       setHeroes(heroes.data);
 
-      const villains = await api.get("/villains");
-      setVillains(villains.data);
+      // const villains = await api.get("/villains");
+      // setVillains(villains.data);
 
 
-      const antHeroes = await api.get("/antiHeroes");
-      setAntHeroes(antHeroes.data);
+      // const antHeroes = await api.get("/antiHeroes");
+      // setAntHeroes(antHeroes.data);
 
 
-      const aliens = await api.get("/aliens");
-      setAliens(aliens.data);
+      // const aliens = await api.get("/aliens");
+      // setAliens(aliens.data);
 
 
-      const humans = await api.get("/humans");
-      setHumans(humans.data);
+      // const humans = await api.get("/humans");
+      // setHumans(humans.data);
 
     }
 
@@ -51,20 +48,19 @@ const Characters: React.FC = () => {
 
   return (
     <Container>
-      <CharactersListContainer>
-        <CharactersListHeader>
-          <Title>Herois</Title>
-          <MoreCharacter>Ver Tudo</MoreCharacter>
-        </CharactersListHeader>
-        <CharactersList>
-          <CardImage source={{ uri: "/Users/douglassantos/Desktop/workspace/marvelComics/src/assets/chars/spider-man.png" }} />
-          <Card>
-            <CardTitle>Peter Parker</CardTitle>
-            <CardSubTitle>Homem Aranha</CardSubTitle>
-          </Card>
-        </CharactersList>
-      </CharactersListContainer>
-
+      <CharacterHeader />
+      <CharactersListContainer
+        ref={characterListRef}
+        data={heroes}
+        keyExtractor={(character: any) => character.id}
+        renderItem={({ item }: { item: any }) =>
+          <Character
+            name={item.name}
+            alterEgo={item.alterEgo}
+            imagePath={item.imagePath}
+          />
+        }
+      />
     </Container>
   )
 }
