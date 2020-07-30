@@ -47,7 +47,7 @@ const Character: React.FC<ICharacterProps> = ({ data }: ICharacterProps) => {
   const navigator = useNavigation();
 
   return (
-    <Container onPress={() => navigator.push("CharacterDetail", data)}>
+    <Container onPress={() => navigator.push("CharacterDetail", { data })}>
       <CardImage source={{ uri: data.imagePath }}
       />
       <Card>

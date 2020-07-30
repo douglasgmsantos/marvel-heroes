@@ -22,42 +22,43 @@ import {
 
 
 interface ICharacterDetailProps {
-  name: string;
-  alterEgo: string;
-  imagePath: string;
-  biography,
-  caracteristics: {
-    birth: number;
-    weight: {
-      value: number;
-      unity: string;
+  data: {
+    name: string;
+    alterEgo: string;
+    imagePath: string;
+    biography,
+    caracteristics: {
+      birth: number;
+      weight: {
+        value: number;
+        unity: string;
+      },
+      height: {
+        value: number;
+        unity: string;
+      },
+      universe: string;
     },
-    height: {
-      value: number;
-      unity: string;
+    abilities: {
+      force: number;
+      intelligence: number;
+      agility: number;
+      endurance: number;
+      velocity: number;
     },
-    universe: string;
-  },
-  abilities: {
-    force: number;
-    intelligence: number;
-    agility: number;
-    endurance: number;
-    velocity: number;
-  },
-  movies: string[];
+    movies: string[];
+  }
 }
 
 const CharacterDetail: React.FC<ICharacterDetailProps> = ({ }: ICharacterDetailProps) => {
   const navigator = useNavigation();
   const { params } = useRoute();
-
-  console.log("params", params)
+  const { data }: ICharacterDetailProps = params;
 
   return (
     <>
       <StatusBar barStyle="light-content" translucent backgroundColor="transparent" />
-      <Container source={{ uri: "/Users/douglassantos/Desktop/workspace/marvelComics/src/assets/chars/spider-man.png" }} >
+      <Container source={{ uri: data.imagePath }} >
         <Header>
           <BackRouter onPress={() => navigator.navigate("Dashboard")}>
             <Image source={BackDetail} />
@@ -65,8 +66,8 @@ const CharacterDetail: React.FC<ICharacterDetailProps> = ({ }: ICharacterDetailP
         </Header>
         <Content>
           <ContainerBasic>
-            <Name>Peter Parker</Name>
-            <AlterEgo>Homem Aranha</AlterEgo>
+            <Name>{data.name}</Name>
+            <AlterEgo>{data.alterEgo}</AlterEgo>
           </ContainerBasic>
           <Feature />
           <Description />
