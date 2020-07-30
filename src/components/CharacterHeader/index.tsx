@@ -7,10 +7,15 @@ import {
   MoreCharacter
 } from './styles';
 
-const CharacterHeader: React.FC = () => {
+
+interface ICharacterHeader {
+  title: string
+}
+
+const CharacterHeader: React.FC<ICharacterHeader> = ({ title }: ICharacterHeader) => {
   return (
     <Container>
-      <Title>Herois</Title>
+      <Title>{title}</Title>
       <MoreCharacter>Ver Tudo</MoreCharacter>
     </Container>
   )

@@ -1,4 +1,6 @@
 import React from 'react';
+import { useNavigation } from '@react-navigation/native';
+
 
 import {
   Container,
@@ -11,22 +13,46 @@ import {
 
 
 interface ICharacterProps {
-  imagePath: string;
-  name: string;
-  alterEgo: string;
+  data: {
+    name: string;
+    alterEgo: string;
+    imagePath: string;
+    biography,
+    caracteristics: {
+      birth: number;
+      weight: {
+        value: number;
+        unity: string;
+      },
+      height: {
+        value: number;
+        unity: string;
+      },
+      universe: string;
+    },
+    abilities: {
+      force: number;
+      intelligence: number;
+      agility: number;
+      endurance: number;
+      velocity: number;
+    },
+    movies: string[];
+  }
 }
 
 
 
-const Character: React.FC<ICharacterProps> = ({ name, alterEgo, imagePath }: ICharacterProps) => {
-  console.log("imagePath", imagePath)
+const Character: React.FC<ICharacterProps> = ({ data }: ICharacterProps) => {
+  const navigator = useNavigation();
+
   return (
-    <Container>
-      <CardImage source={{ uri: imagePath }}
+    <Container onPress={() => navigator.push("CharacterDetail", data)}>
+      <CardImage source={{ uri: data.imagePath }}
       />
       <Card>
-        <CardTitle>{alterEgo}</CardTitle>
-        <CardSubTitle>{name}</CardSubTitle>
+        <CardTitle>{data.alterEgo}</CardTitle>
+        <CardSubTitle>{data.name}</CardSubTitle>
       </Card>
     </Container>
   )

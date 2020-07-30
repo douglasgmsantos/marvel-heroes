@@ -25,20 +25,20 @@ const Characters: React.FC = () => {
       const heroes = await api.get("/heroes");
       setHeroes(heroes.data);
 
-      // const villains = await api.get("/villains");
-      // setVillains(villains.data);
+      const villains = await api.get("/villains");
+      setVillains(villains.data);
 
 
-      // const antHeroes = await api.get("/antiHeroes");
-      // setAntHeroes(antHeroes.data);
+      const antHeroes = await api.get("/antiHeroes");
+      setAntHeroes(antHeroes.data);
 
 
-      // const aliens = await api.get("/aliens");
-      // setAliens(aliens.data);
+      const aliens = await api.get("/aliens");
+      setAliens(aliens.data);
 
 
-      // const humans = await api.get("/humans");
-      // setHumans(humans.data);
+      const humans = await api.get("/humans");
+      setHumans(humans.data);
 
     }
 
@@ -48,17 +48,53 @@ const Characters: React.FC = () => {
 
   return (
     <Container>
-      <CharacterHeader />
+      <CharacterHeader title="Heróis" />
       <CharactersListContainer
         ref={characterListRef}
         data={heroes}
         keyExtractor={(character: any) => character.id}
         renderItem={({ item }: { item: any }) =>
-          <Character
-            name={item.name}
-            alterEgo={item.alterEgo}
-            imagePath={item.imagePath}
-          />
+          <Character key={item.id} data={item} />
+        }
+      />
+
+      <CharacterHeader title="Vilões" />
+      <CharactersListContainer
+        ref={characterListRef}
+        data={villains}
+        keyExtractor={(character: any) => character.id}
+        renderItem={({ item }: { item: any }) =>
+          <Character key={item.id} data={item} />
+        }
+      />
+
+      <CharacterHeader title="Ant-Heróis" />
+      <CharactersListContainer
+        ref={characterListRef}
+        data={antheroes}
+        keyExtractor={(character: any) => character.id}
+        renderItem={({ item }: { item: any }) =>
+          <Character key={item.id} data={item} />
+        }
+      />
+
+      <CharacterHeader title="Alienígenas" />
+      <CharactersListContainer
+        ref={characterListRef}
+        data={aliens}
+        keyExtractor={(character: any) => character.id}
+        renderItem={({ item }: { item: any }) =>
+          <Character key={item.id} data={item} />
+        }
+      />
+
+      <CharacterHeader title="Humanos" />
+      <CharactersListContainer
+        ref={characterListRef}
+        data={humans}
+        keyExtractor={(character: any) => character.id}
+        renderItem={({ item }: { item: any }) =>
+          <Character key={item.id} data={item} />
         }
       />
     </Container>
