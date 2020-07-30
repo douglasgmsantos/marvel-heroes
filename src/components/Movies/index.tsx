@@ -7,16 +7,19 @@ import {
   MovieImage
 } from './styles';
 
-const Movies: React.FC = () => {
+interface IMoviesProps {
+  movies: string[];
+}
+
+const Movies: React.FC<IMoviesProps> = ({
+  movies
+}: IMoviesProps) => {
   return (
     <>
       <Container>
         <Title>Filmes</Title>
         <MovieContainer>
-          <MovieImage source={{ uri: "/Users/douglassantos/Desktop/workspace/marvelComics/src/assets/movies/ant-man-and-the-wasp.jpg" }} />
-          <MovieImage source={{ uri: "/Users/douglassantos/Desktop/workspace/marvelComics/src/assets/movies/ant-man-and-the-wasp.jpg" }} />
-          <MovieImage source={{ uri: "/Users/douglassantos/Desktop/workspace/marvelComics/src/assets/movies/ant-man-and-the-wasp.jpg" }} />
-          <MovieImage source={{ uri: "/Users/douglassantos/Desktop/workspace/marvelComics/src/assets/movies/ant-man-and-the-wasp.jpg" }} />
+          {movies.map(movie => <MovieImage key={movie} source={{ uri: movie }} />)}
         </MovieContainer>
       </Container>
     </>

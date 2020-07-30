@@ -69,10 +69,16 @@ const CharacterDetail: React.FC<ICharacterDetailProps> = ({ }: ICharacterDetailP
             <Name>{data.name}</Name>
             <AlterEgo>{data.alterEgo}</AlterEgo>
           </ContainerBasic>
-          <Feature />
-          <Description />
-          <Abilities />
-          <Movies />
+          <Feature caracteristics={data.caracteristics} />
+          <Description biography={data.biography} />
+          <Abilities
+            force={data.abilities.force}
+            intelligence={data.abilities.intelligence}
+            agility={data.abilities.agility}
+            endurance={data.abilities.endurance}
+            velocity={data.abilities.velocity}
+          />
+          <Movies movies={data.movies} />
         </Content>
       </Container>
     </>

@@ -10,29 +10,43 @@ import {
 
 } from './styles';
 
-const Abilities: React.FC = () => {
+interface IAbilitiesProps {
+  force: number;
+  intelligence: number;
+  agility: number;
+  endurance: number;
+  velocity: number;
+}
+
+const Abilities: React.FC<IAbilitiesProps> = ({
+  agility,
+  endurance,
+  force,
+  intelligence,
+  velocity
+}: IAbilitiesProps) => {
   return (
     <Container>
       <Title>Habilidades</Title>
       <Ability>
         <AbilityName>Força</AbilityName>
-        <AbilityStrengthBar level={90} />
+        <AbilityStrengthBar level={force} />
       </Ability>
       <Ability>
         <AbilityName>Inteligência</AbilityName>
-        <AbilityStrengthBar level={70} />
+        <AbilityStrengthBar level={intelligence} />
       </Ability>
       <Ability>
         <AbilityName>Agilidade</AbilityName>
-        <AbilityStrengthBar level={65} />
+        <AbilityStrengthBar level={agility} />
       </Ability>
       <Ability>
         <AbilityName>Resistência</AbilityName>
-        <AbilityStrengthBar level={88} />
+        <AbilityStrengthBar level={endurance} />
       </Ability>
       <Ability>
         <AbilityName>Velocidade</AbilityName>
-        <AbilityStrengthBar level={80} />
+        <AbilityStrengthBar level={velocity} />
       </Ability>
     </Container>
   )

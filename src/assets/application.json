@@ -25,11 +25,11 @@
 				"velocity": 80
 			},
 			"movies": [
-				"./movies/captain-america-3.jpg",
-				"./movies/spider-man-homecoming.jpg",
-				"./movies/avengers-3.jpg",
-				"./movies/avengers-4.jpg",
-				"./movies/spider-man-far-from-home.jpg"
+				"http://localhost:3000/assets/movies/captain-america-3.jpg",
+				"http://localhost:3000/assets/movies/spider-man-homecoming.jpg",
+				"http://localhost:3000/assets/movies/avengers-3.jpg",
+				"http://localhost:3000/assets/movies/avengers-4.jpg",
+				"http://localhost:3000/assets/movies/spider-man-far-from-home.jpg"
 			]
 		},
 		{
@@ -57,10 +57,10 @@
 				"velocity": 80
 			},
 			"movies": [
-				"./movies/captain-america-3.jpg",
-				"./movies/black-panther.jpg",
-				"./movies/avengers-3.jpg",
-				"./movies/avengers-4.jpg"
+				"http://localhost:3000/assets/movies/captain-america-3.jpg",
+				"http://localhost:3000/assets/movies/black-panther.jpg",
+				"http://localhost:3000/assets/movies/avengers-3.jpg",
+				"http://localhost:3000/assets/movies/avengers-4.jpg"
 			]
 		},
 		{
@@ -88,16 +88,16 @@
 				"velocity": 80
 			},
 			"movies": [
-				"./movies/iron-man-1.jpg",
-				"./movies/iron-man-2.jpg",
-				"./movies/hulk.jpg",
-				"./movies/avengers-1.jpg",
-				"./movies/iron-man-3.jpg",
-				"./movies/avengers-2.jpg",
-				"./movies/captain-america-3.jpg",
-				"./movies/spider-man-homecoming.jpg",
-				"./movies/avengers-3.jpg",
-				"./movies/avengers-4.jpg"
+				"http://localhost:3000/assets/movies/iron-man-1.jpg",
+				"http://localhost:3000/assets/movies/iron-man-2.jpg",
+				"http://localhost:3000/assets/movies/hulk.jpg",
+				"http://localhost:3000/assets/movies/avengers-1.jpg",
+				"http://localhost:3000/assets/movies/iron-man-3.jpg",
+				"http://localhost:3000/assets/movies/avengers-2.jpg",
+				"http://localhost:3000/assets/movies/captain-america-3.jpg",
+				"http://localhost:3000/assets/movies/spider-man-homecoming.jpg",
+				"http://localhost:3000/assets/movies/avengers-3.jpg",
+				"http://localhost:3000/assets/movies/avengers-4.jpg"
 			]
 		}
 	],
@@ -127,8 +127,8 @@
 				"velocity": 80
 			},
 			"movies": [
-				"./movies/captain-america-1.jpg",
-				"./movies/avengers-4.jpg"
+				"http://localhost:3000/assets/movies/captain-america-1.jpg",
+				"http://localhost:3000/assets/movies/avengers-4.jpg"
 			]
 		},
 		{
@@ -156,8 +156,8 @@
 				"velocity": 70
 			},
 			"movies": [
-				"./movies/fantastic-four-1.jpg",
-				"./movies/fantastic-four-2.jpg"
+				"http://localhost:3000/assets/movies/fantastic-four-1.jpg",
+				"http://localhost:3000/assets/movies/fantastic-four-2.jpg"
 			]
 		},
 		{
@@ -185,7 +185,7 @@
 				"velocity": 65
 			},
 			"movies": [
-				"./movies/spider-man-1.jpg"
+				"http://localhost:3000/assets/movies/spider-man-1.jpg"
 			]
 		}
 	],
@@ -215,8 +215,8 @@
 				"velocity": 70
 			},
 			"movies": [
-				"./movies/deadpool-1.jpg",
-				"./movies/deadpool-2.jpg"
+				"http://localhost:3000/assets/movies/deadpool-1.jpg",
+				"http://localhost:3000/assets/movies/deadpool-2.jpg"
 			]
 		},
 		{
@@ -244,7 +244,7 @@
 				"velocity": 75
 			},
 			"movies": [
-				"./movies/venom.jpg"
+				"http://localhost:3000/assets/movies/venom.jpg"
 			]
 		},
 		{
@@ -272,7 +272,7 @@
 				"velocity": 65
 			},
 			"movies": [
-				"./movies/punisher.jpg"
+				"http://localhost:3000/assets/movies/punisher.jpg"
 			]
 		}
 	],
@@ -302,9 +302,9 @@
 				"velocity": 80
 			},
 			"movies": [
-				"./movies/guardians-of-the-galaxy-1.jpg",
-				"./movies/avengers-3.jpg",
-				"./movies/avengers-4.jpg"
+				"http://localhost:3000/assets/movies/guardians-of-the-galaxy-1.jpg",
+				"http://localhost:3000/assets/movies/avengers-3.jpg",
+				"http://localhost:3000/assets/movies/avengers-4.jpg"
 			]
 		},
 		{
@@ -332,8 +332,8 @@
 				"velocity": 75
 			},
 			"movies": [
-				"./movies/captain-marvel.jpg",
-				"./movies/guardians-of-the-galaxy-1.jpg"
+				"http://localhost:3000/assets/movies/captain-marvel.jpg",
+				"http://localhost:3000/assets/movies/guardians-of-the-galaxy-1.jpg"
 			]
 		},
 		{
@@ -361,7 +361,7 @@
 				"velocity": 80
 			},
 			"movies": [
-				"./movies/captain-marvel.jpg"
+				"http://localhost:3000/assets/movies/captain-marvel.jpg"
 			]
 		}
 	],
@@ -391,12 +391,12 @@
 				"velocity": 30
 			},
 			"movies": [
-				"./movies/captain-america-1.jpg",
-				"./movies/iron-man-1.jpg",
-				"./movies/iron-man-2.jpg",
-				"./movies/captain-america-2.jpg",
-				"./movies/ant-man.jpg",
-				"./movies/captain-america-3.jpg"
+				"http://localhost:3000/assets/movies/captain-america-1.jpg",
+				"http://localhost:3000/assets/movies/iron-man-1.jpg",
+				"http://localhost:3000/assets/movies/iron-man-2.jpg",
+				"http://localhost:3000/assets/movies/captain-america-2.jpg",
+				"http://localhost:3000/assets/movies/ant-man.jpg",
+				"http://localhost:3000/assets/movies/captain-america-3.jpg"
 			]
 		},
 		{
@@ -424,9 +424,9 @@
 				"velocity": 25
 			},
 			"movies": [
-				"./movies/spider-man-1.jpg",
-				"./movies/spider-man-2.jpg",
-				"./movies/spider-man-3.jpg"
+				"http://localhost:3000/assets/movies/spider-man-1.jpg",
+				"http://localhost:3000/assets/movies/spider-man-2.jpg",
+				"http://localhost:3000/assets/movies/spider-man-3.jpg"
 			]
 		},
 		{
@@ -454,13 +454,13 @@
 				"velocity": 50
 			},
 			"movies": [
-				"./movies/iron-man-1.jpg",
-				"./movies/iron-man-2.jpg",
-				"./movies/iron-man-3.jpg",
-				"./movies/spider-man-homecoming.jpg",
-				"./movies/avengers-3.jpg",
-				"./movies/avengers-4.jpg",
-				"./movies/spider-man-far-from-home.jpg"
+				"http://localhost:3000/assets/movies/iron-man-1.jpg",
+				"http://localhost:3000/assets/movies/iron-man-2.jpg",
+				"http://localhost:3000/assets/movies/iron-man-3.jpg",
+				"http://localhost:3000/assets/movies/spider-man-homecoming.jpg",
+				"http://localhost:3000/assets/movies/avengers-3.jpg",
+				"http://localhost:3000/assets/movies/avengers-4.jpg",
+				"http://localhost:3000/assets/movies/spider-man-far-from-home.jpg"
 			]
 		}
 	]

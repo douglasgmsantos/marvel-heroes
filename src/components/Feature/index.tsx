@@ -14,32 +14,51 @@ import {
   FeatureTitle
 } from './styles';
 
-const Feature: React.FC = () => {
+interface IFeatureProps {
+  caracteristics: {
+    birth: number;
+    weight: {
+      value: number;
+      unity: string;
+    },
+    height: {
+      value: number;
+      unity: string;
+    },
+    universe: string;
+  }
+}
+const Feature: React.FC<IFeatureProps> = ({
+  caracteristics
+}: IFeatureProps) => {
+
+
   return (
     <Container>
       <FeatureItem>
         <FeatureImageContainer>
           <FeatureImage source={AgeIcon} />
         </FeatureImageContainer>
-        <FeatureTitle>30 anos</FeatureTitle>
+
+        <FeatureTitle>{new Date().getFullYear() - caracteristics.birth} anos</FeatureTitle>
       </FeatureItem>
       <FeatureItem>
         <FeatureImageContainer>
           <FeatureImage source={WeightIcon} />
         </FeatureImageContainer>
-        <FeatureTitle>30 anos</FeatureTitle>
+        <FeatureTitle>{caracteristics.weight.value} {caracteristics.weight.unity}</FeatureTitle>
       </FeatureItem>
       <FeatureItem>
         <FeatureImageContainer>
           <FeatureImage source={HeightIcon} />
         </FeatureImageContainer>
-        <FeatureTitle>30 anos</FeatureTitle>
+        <FeatureTitle>{caracteristics.height.value} {caracteristics.height.unity}</FeatureTitle>
       </FeatureItem>
       <FeatureItem>
         <FeatureImageContainer>
           <FeatureImage source={UniverseIcon} />
         </FeatureImageContainer>
-        <FeatureTitle>30 anos</FeatureTitle>
+        <FeatureTitle>{caracteristics.universe}</FeatureTitle>
       </FeatureItem>
     </Container>
   );
