@@ -30,6 +30,7 @@ export const BackRouter = styled.TouchableOpacity`
 export const ContainerBasic = styled.SafeAreaView`
   margin-top: 350px;
   width: 50%;
+  margin-left: 12px;
 `;
 
 export const Name = styled.Text` 
